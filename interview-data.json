@@ -1,0 +1,13 @@
+{
+  "accounts": [
+    {
+      "id": 1777390091930,
+      "username": "chanchal",
+      "passwordHash": "ac1964eb089654e01f7bfb4871e0cd31ea4d2aa6e6e48774b6b9917b1341dbf6",
+      "created_at": "2026-04-28T15:28:11.931Z"
+    }
+  ],
+  "users": [],
+  "interviews": [],
+  "questions": []
+}

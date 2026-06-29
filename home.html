@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - AI Interview System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page home-app-page">
+  <main class="home-dashboard">
+    <nav class="home-topnav">
+      <div>
+        <h2>AI Interview System</h2>
+        <p>Welcome, <span id="homeUserName">Student</span></p>
+      </div>
+      <div class="home-nav-actions">
+        <button class="small-btn" onclick="goHome()">Home</button>
+        <button class="small-btn" onclick="goToDashboard()">Dashboard</button>
+        <button class="small-btn" onclick="goToProfile()">Profile</button>
+        <button class="small-btn" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+
+    <section class="home-hero-panel">
+      <div class="home-copy">
+        <p class="eyebrow">Interview preparation workspace</p>
+        <h1>Prepare for your interview.</h1>
+        <p>
+          Save your target profile, create a roadmap, practice questions, and review your feedback without getting lost.
+        </p>
+
+        <div class="action-buttons">
+          <button onclick="goToDashboard()">Open Dashboard</button>
+          <button class="secondary" onclick="startPrep()">Start Interview</button>
+          <button class="small-btn" onclick="goToProfile()">View Profile</button>
+        </div>
+      </div>
+
+      <div class="home-status-panel">
+        <div class="home-mini-stats">
+          <div>
+            <strong>AI</strong>
+            <span>Evaluation</span>
+          </div>
+          <div>
+            <strong>10</strong>
+            <span>Score scale</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>Practice</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-action-grid">
+      <button class="home-action-card" onclick="goToDashboard()">
+        <span>01</span>
+        <strong>Dashboard</strong>
+        <small>Add company, domain, language, level, and create roadmap.</small>
+      </button>
+
+      <button class="home-action-card" onclick="startPrep()">
+        <span>02</span>
+        <strong>Interview Practice</strong>
+        <small>Answer questions and get score with feedback.</small>
+      </button>
+
+      <button class="home-action-card" onclick="goToProfile()">
+        <span>03</span>
+        <strong>Profile & Progress</strong>
+        <small>Check saved profile, recent feedback, and average score.</small>
+      </button>
+    </section>
+
+    <section class="home-flow">
+      <h2>Preparation Flow</h2>
+      <div class="home-steps">
+        <div class="home-step">
+          <span>1</span>
+          <div>
+            <h3>Set Profile</h3>
+            <p>Add company, language, domain, and level.</p>
+          </div>
+        </div>
+        <div class="home-step">
+          <span>2</span>
+          <div>
+            <h3>Create Roadmap</h3>
+            <p>Get a simple plan for interview preparation.</p>
+          </div>
+        </div>
+        <div class="home-step">
+          <span>3</span>
+          <div>
+            <h3>Practice Interview</h3>
+            <p>Submit answers and receive score with feedback.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

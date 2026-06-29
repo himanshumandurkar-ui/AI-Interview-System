@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - AI Interview System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <h2>AI Prep</h2>
+      <p>Menu</p>
+      <button class="nav-btn" onclick="goHome()">Home</button>
+      <button class="nav-btn active">Dashboard</button>
+      <button class="nav-btn" onclick="startPrep()">Interview</button>
+      <button class="nav-btn" onclick="goToProfile()">Profile</button>
+      <button class="nav-btn" onclick="logout()">Logout</button>
+    </aside>
+
+    <main class="main-panel">
+      <div class="topbar">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Set your target, create a roadmap, and add your own interview questions.</p>
+        </div>
+        <button onclick="startPrep()">Start Practice</button>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+        <h3>Your Name</h3>
+        <p class="label-text">Save your preparation profile</p>
+        <input type="text" id="name" placeholder="e.g. Himanshu">
+      </div>
+
+        <div class="card">
+        <h3>Email</h3>
+        <p class="label-text">Used only for your local profile</p>
+        <input type="email" id="email" placeholder="e.g. himanshu@email.com">
+      </div>
+
+        <div class="card">
+        <h3>Target Company</h3>
+        <p class="label-text">Enter the company you want to prepare for</p>
+        <input type="text" id="company" placeholder="e.g. TCS, Infosys, Google">
+      </div>
+
+        <div class="card">
+        <h3>Programming Language</h3>
+        <p class="label-text">Choose your main interview language</p>
+        <input type="text" id="language" placeholder="e.g. Python, Java, JavaScript">
+      </div>
+
+        <div class="card">
+        <h3>Preparation Field</h3>
+        <p class="label-text">Select your target role or domain</p>
+        <input type="text" id="domain" placeholder="e.g. Web Development, Data Analysis">
+      </div>
+
+        <div class="card">
+        <h3>Current Level</h3>
+        <p class="label-text">Select your current preparation level</p>
+        <select id="level">
+          <option value="">Select Level</option>
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Advanced</option>
+        </select>
+      </div>
+      </div>
+
+      <div class="action-buttons">
+        <button onclick="createRoadmap()">Save Profile & Create Roadmap</button>
+        <button id="regenerateRoadmapBtn" class="secondary roadmap-action" onclick="generateAIRoadmap()">Regenerate AI Roadmap</button>
+        <button class="small-btn" onclick="goToProfile()">View Profile</button>
+      </div>
+
+      <p id="saveStatus" class="status-text">Fill the form and create your roadmap.</p>
+
+      <div class="card roadmap-card">
+        <h3>Your Personalized Roadmap</h3>
+        <p id="roadmapOutput">Your roadmap will appear here after you save your profile.</p>
+      </div>
+
+      <div class="card question-manager">
+        <h3>Add Interview Question</h3>
+        <p class="label-text">Save your own questions for practice. Matching domain and level questions appear first.</p>
+
+      <textarea id="customQuestion" placeholder="Write your interview question here..."></textarea>
+
+      <div class="two-column">
+        <input type="text" id="questionDomain" placeholder="Domain e.g. Web Development">
+        <select id="questionLevel">
+          <option value="">Select Level</option>
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Advanced</option>
+        </select>
+      </div>
+
+      <div class="action-buttons">
+        <button onclick="addQuestion()">Add Question</button>
+      </div>
+
+      <p id="questionStatus" class="status-text">Add questions to build your own practice bank.</p>
+
+        <div id="questionList" class="saved-list">
+          <p>Loading saved questions...</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

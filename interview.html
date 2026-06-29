@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interview - AI Interview System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <h2>AI Prep</h2>
+      <p>Menu</p>
+      <button class="nav-btn" onclick="goHome()">Home</button>
+      <button class="nav-btn" onclick="goBack()">Dashboard</button>
+      <button class="nav-btn active">Interview</button>
+      <button class="nav-btn" onclick="goToProfile()">Profile</button>
+      <button class="nav-btn" onclick="logout()">Logout</button>
+    </aside>
+
+    <main class="main-panel">
+      <div class="topbar">
+        <div>
+          <h1>Interview Round</h1>
+          <p>Practice one question at a time and save feedback to your profile.</p>
+        </div>
+        <button class="small-btn" onclick="goBack()">Back</button>
+      </div>
+
+      <div class="big-card card">
+        <h2>Current Question</h2>
+        <p class="label-text">Answer clearly and confidently</p>
+
+        <p id="question" class="question-text">Loading question...</p>
+
+        <p class="label-text">Your Answer</p>
+        <textarea id="answer" placeholder="Write your answer here..."></textarea>
+
+        <div class="action-buttons">
+          <button onclick="submitAnswer()">Submit Answer</button>
+          <button class="secondary" onclick="nextQuestion()">Next Question</button>
+          <button class="small-btn" onclick="previousQuestion()">Previous Question</button>
+        </div>
+
+        <div id="scorePanel" class="score-panel">
+          <span id="scoreValue">Score: --/10</span>
+          <span id="scoreMode" class="ai-mode-badge demo-ai">Waiting</span>
+        </div>
+        <div id="feedback">Feedback will appear here after submission.</div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

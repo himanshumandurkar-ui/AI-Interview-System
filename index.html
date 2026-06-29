@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interview Prep System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="landing-page">
+
+  <header class="navbar">
+    <h2>Interview Prep System</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>AI Interview Preparation System</h1>
+      <p>Practice smart. Improve fast. Succeed.</p>
+
+      <div class="buttons">
+        <button class="primary" onclick="goToLogin()">Start Preparation</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="AI interview assistant">
+    </div>
+  </section>
+
+  <section id="about" class="front-info">
+    <h2>About</h2>
+    <p>Prepare with custom questions, roadmap guidance, answer feedback, and progress tracking.</p>
+  </section>
+
+  <section id="contact" class="front-info">
+    <h2>Contact</h2>
+    <p>Start your practice from the button above and continue from your saved profile.</p>
+  </section>
+
+  <script>
+function goToLogin() {
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

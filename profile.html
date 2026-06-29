@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile - AI Interview System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <h2>AI Prep</h2>
+      <p>Menu</p>
+      <button class="nav-btn" onclick="goHome()">Home</button>
+      <button class="nav-btn" onclick="goBack()">Dashboard</button>
+      <button class="nav-btn" onclick="startPrep()">Interview</button>
+      <button class="nav-btn active">Profile</button>
+      <button class="nav-btn" onclick="logout()">Logout</button>
+    </aside>
+
+    <main class="main-panel">
+      <div class="topbar">
+        <div>
+          <h1>Your Profile</h1>
+          <p>View your details, performance, and recent interview feedback.</p>
+        </div>
+        <button class="small-btn" onclick="goBack()">Back</button>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>User Details</h3>
+          <p><strong>Name:</strong> <span id="profileName">Loading...</span></p>
+          <p><strong>Email:</strong> <span id="profileEmail">Loading...</span></p>
+        </div>
+
+        <div class="card">
+          <h3>Preparation Info</h3>
+          <p class="label-text">Latest saved preparation details</p>
+
+          <p><strong>Target Company:</strong> <span id="profileCompany">Loading...</span></p>
+          <p><strong>Language:</strong> <span id="profileLanguage">Loading...</span></p>
+          <p><strong>Domain:</strong> <span id="profileDomain">Loading...</span></p>
+          <p><strong>Level:</strong> <span id="profileLevel">Loading...</span></p>
+        </div>
+
+        <div class="card">
+          <h3>Performance</h3>
+          <p><strong>Total Interviews:</strong> <span id="totalInterviews">0</span></p>
+          <p><strong>Average Score:</strong> <span id="averageScore">0/10</span></p>
+          <p><strong>Storage:</strong> Active</p>
+        </div>
+      </div>
+
+      <div class="card history-card">
+        <h3>Recent Interview Feedback</h3>
+        <div id="historyList">
+          <p>Loading history...</p>
+        </div>
+      </div>
+
+      <div class="card ai-chat-card">
+        <div class="card-title-row">
+          <h3>AI Chat Board</h3>
+          <span id="aiModeBadge" class="ai-mode-badge">Checking AI mode...</span>
+        </div>
+        <p class="label-text">Ask for interview tips, roadmap help, answer improvement, or topic revision.</p>
+
+        <div id="chatMessages" class="chat-messages">
+          <div class="chat-message bot-message">
+            Hi, I am your interview prep assistant. Ask me what you want to improve.
+          </div>
+        </div>
+
+        <div class="chat-input-row">
+          <input type="text" id="chatInput" placeholder="Ask your interview question...">
+          <button onclick="sendChatMessage()">Send</button>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button onclick="startPrep()">Practice More</button>
+        <button class="small-btn" onclick="logout()">Logout</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

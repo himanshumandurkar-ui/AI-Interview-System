@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - AI Interview System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center login-page">
+
+  <div class="card login-card login-panel">
+    <h2 id="authTitle">AI Interview System</h2>
+    <p id="authHelp">Login to continue managing your profile, questions, practice, and progress.</p>
+
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button id="authAction" onclick="login()">Login</button>
+    <button class="secondary auth-toggle" id="authToggle" onclick="showRegister()">Create New Account</button>
+    <p id="authStatus" class="helper-text">Enter your username and password.</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

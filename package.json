@@ -1,0 +1,22 @@
+{
+  "name": "ai-interview-system",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "local-server.mjs",
+  "scripts": {
+    "start": "node local-server.mjs",
+    "test": "node --check local-server.mjs && node --check app.mjs && node --check app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "openai": "^6.34.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1"
+  }
+}
